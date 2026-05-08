@@ -1,0 +1,9 @@
+langgraph
+langchain
+langchain-google-genai
+pymupdf
+pydantic
+networkx
+pyvis
+streamlit
+python-dotenv
