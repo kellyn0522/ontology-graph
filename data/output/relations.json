@@ -1,0 +1,64 @@
+{
+  "relations": [
+    {
+      "subject": "InsuranceCompany",
+      "predicate": "manages",
+      "object": "InsuranceProduct"
+    },
+    {
+      "subject": "InsuranceProduct",
+      "predicate": "includes",
+      "object": "InsurancePolicy"
+    },
+    {
+      "subject": "InsurancePolicy",
+      "predicate": "includes",
+      "object": "Coverage"
+    },
+    {
+      "subject": "InsurancePolicy",
+      "predicate": "requires",
+      "object": "Premium"
+    },
+    {
+      "subject": "AutomobileInsurance",
+      "predicate": "includes",
+      "object": "Coverage"
+    },
+    {
+      "subject": "Coverage",
+      "predicate": "belongsTo",
+      "object": "InsurancePolicy"
+    },
+    {
+      "subject": "InsuranceClaim",
+      "predicate": "requires",
+      "object": "ClaimDocument"
+    },
+    {
+      "subject": "InsuranceClaim",
+      "predicate": "requires",
+      "object": "AccidentInformation"
+    },
+    {
+      "subject": "InsuranceCompany",
+      "predicate": "manages",
+      "object": "InsuranceClaim"
+    },
+    {
+      "subject": "HealthInsurance",
+      "predicate": "covers",
+      "object": "MedicalExpenses"
+    },
+    {
+      "subject": "LifeInsurance",
+      "predicate": "includes",
+      "object": "Coverage"
+    },
+    {
+      "subject": "RiskFactor",
+      "predicate": "belongsTo",
+      "object": "Premium"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "core_classes": [
+    "InsuranceCompany",
+    "InsuranceProduct",
+    "InsurancePolicy",
+    "Customer",
+    "Coverage",
+    "InsuranceClaim",
+    "ClaimDocument",
+    "RiskFactor",
+    "AutomobileInsurance",
+    "HealthInsurance",
+    "LifeInsurance"
+  ]
+}

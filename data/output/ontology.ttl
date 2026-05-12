@@ -1,0 +1,45 @@
+@prefix onto: <http://example.org/ontology/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+onto:ClientProject rdfs:subClassOf onto:Project .
+
+onto:Contract onto:belongsTo onto:Customer ;
+    onto:includes onto:Service .
+
+onto:ContractDocument rdfs:subClassOf onto:Document .
+
+onto:DatabaseAdministrator onto:manages onto:DatabaseSystem .
+
+onto:FinanceDepartment onto:manages onto:Invoice .
+
+onto:InternalProject rdfs:subClassOf onto:Project .
+
+onto:ManagementSystem onto:covers onto:Document,
+        onto:Project ;
+    rdfs:subClassOf onto:SoftwareSystem .
+
+onto:Manager onto:manages onto:Employee ;
+    rdfs:subClassOf onto:Employee .
+
+onto:Product onto:belongsTo onto:Service ;
+    rdfs:subClassOf onto:Service .
+
+onto:ReportDocument rdfs:subClassOf onto:Document .
+
+onto:ResearchProject onto:includes onto:TechnicalDocument ;
+    rdfs:subClassOf onto:Project .
+
+onto:Invoice onto:belongsTo onto:Customer .
+
+onto:TechnicalDocument rdfs:subClassOf onto:Document .
+
+onto:Customer onto:subscribesTo onto:Service .
+
+onto:DatabaseSystem rdfs:subClassOf onto:SoftwareSystem .
+
+onto:Employee onto:belongsTo onto:Department .
+
+onto:SoftwareSystem onto:requires onto:DatabaseSystem .
+
+onto:Project onto:includes onto:Document .
+

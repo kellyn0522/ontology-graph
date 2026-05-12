@@ -1,0 +1,203 @@
+{
+  "refined_hierarchies": [
+    {
+      "parent": "Coverage",
+      "child": "VehicleCoverage",
+      "relation": "subClassOf"
+    },
+    {
+      "parent": "Coverage",
+      "child": "DriverCoverage",
+      "relation": "subClassOf"
+    },
+    {
+      "parent": "Coverage",
+      "child": "AccidentCoverage",
+      "relation": "subClassOf"
+    },
+    {
+      "parent": "Coverage",
+      "child": "DeathCoverage",
+      "relation": "subClassOf"
+    },
+    {
+      "parent": "Coverage",
+      "child": "DisabilityCoverage",
+      "relation": "subClassOf"
+    },
+    {
+      "parent": "RiskFactor",
+      "child": "DrivingHistory",
+      "relation": "subClassOf"
+    },
+    {
+      "parent": "RiskFactor",
+      "child": "MedicalHistory",
+      "relation": "subClassOf"
+    },
+    {
+      "parent": "RiskFactor",
+      "child": "Age",
+      "relation": "subClassOf"
+    },
+    {
+      "parent": "RiskFactor",
+      "child": "PropertyValue",
+      "relation": "subClassOf"
+    }
+  ],
+  "refined_attributes": [
+    {
+      "class": "InsuranceCompany",
+      "attribute": "companyName",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "InsuranceCompany",
+      "attribute": "contactInformation",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "InsuranceProduct",
+      "attribute": "productName",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "InsuranceProduct",
+      "attribute": "productType",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "InsurancePolicy",
+      "attribute": "policyNumber",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "InsurancePolicy",
+      "attribute": "premiumAmount",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "InsurancePolicy",
+      "attribute": "coverageDetails",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "Coverage",
+      "attribute": "coverageType",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "Coverage",
+      "attribute": "coverageAmount",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "InsuranceClaim",
+      "attribute": "claimAmount",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "InsuranceClaim",
+      "attribute": "claimStatus",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "ClaimDocument",
+      "attribute": "documentType",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "ClaimDocument",
+      "attribute": "submissionDate",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "RiskFactor",
+      "attribute": "riskFactorType",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "RiskFactor",
+      "attribute": "riskValue",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "AutomobileInsurance",
+      "attribute": "vehicleCoverageDetails",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "HealthInsurance",
+      "attribute": "medicalCoverageDetails",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "LifeInsurance",
+      "attribute": "deathCoverageDetails",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "LifeInsurance",
+      "attribute": "disabilityCoverageDetails",
+      "relation": "hasProperty"
+    }
+  ],
+  "refined_relations": [
+    {
+      "subject": "InsuranceCompany",
+      "predicate": "manages",
+      "object": "InsuranceProduct"
+    },
+    {
+      "subject": "InsuranceProduct",
+      "predicate": "includes",
+      "object": "InsurancePolicy"
+    },
+    {
+      "subject": "InsurancePolicy",
+      "predicate": "includes",
+      "object": "Coverage"
+    },
+    {
+      "subject": "InsurancePolicy",
+      "predicate": "requires",
+      "object": "Premium"
+    },
+    {
+      "subject": "AutomobileInsurance",
+      "predicate": "includes",
+      "object": "Coverage"
+    },
+    {
+      "subject": "Coverage",
+      "predicate": "belongsTo",
+      "object": "InsurancePolicy"
+    },
+    {
+      "subject": "InsuranceClaim",
+      "predicate": "requires",
+      "object": "ClaimDocument"
+    },
+    {
+      "subject": "InsuranceCompany",
+      "predicate": "manages",
+      "object": "InsuranceClaim"
+    },
+    {
+      "subject": "HealthInsurance",
+      "predicate": "covers",
+      "object": "MedicalExpenses"
+    },
+    {
+      "subject": "LifeInsurance",
+      "predicate": "includes",
+      "object": "Coverage"
+    },
+    {
+      "subject": "RiskFactor",
+      "predicate": "belongsTo",
+      "object": "Premium"
+    }
+  ]
+}

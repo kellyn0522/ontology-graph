@@ -7,3 +7,5 @@ networkx
 pyvis
 streamlit
 python-dotenv
+openai
+rdflib

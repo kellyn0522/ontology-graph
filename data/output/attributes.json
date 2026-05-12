@@ -1,0 +1,109 @@
+{
+  "attributes": [
+    {
+      "class": "InsuranceCompany",
+      "attribute": "companyName",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "InsuranceCompany",
+      "attribute": "contactInformation",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "InsuranceProduct",
+      "attribute": "productName",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "InsuranceProduct",
+      "attribute": "productType",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "InsurancePolicy",
+      "attribute": "policyNumber",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "InsurancePolicy",
+      "attribute": "premiumAmount",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "InsurancePolicy",
+      "attribute": "coverageDetails",
+      "relation": "includes"
+    },
+    {
+      "class": "Customer",
+      "attribute": "customerName",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "Customer",
+      "attribute": "contactDetails",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "Coverage",
+      "attribute": "coverageType",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "Coverage",
+      "attribute": "coverageAmount",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "InsuranceClaim",
+      "attribute": "claimAmount",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "InsuranceClaim",
+      "attribute": "claimStatus",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "ClaimDocument",
+      "attribute": "documentType",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "ClaimDocument",
+      "attribute": "submissionDate",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "RiskFactor",
+      "attribute": "riskFactorType",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "RiskFactor",
+      "attribute": "riskValue",
+      "relation": "hasProperty"
+    },
+    {
+      "class": "AutomobileInsurance",
+      "attribute": "vehicleCoverageDetails",
+      "relation": "includes"
+    },
+    {
+      "class": "HealthInsurance",
+      "attribute": "medicalCoverageDetails",
+      "relation": "includes"
+    },
+    {
+      "class": "LifeInsurance",
+      "attribute": "deathCoverageDetails",
+      "relation": "includes"
+    },
+    {
+      "class": "LifeInsurance",
+      "attribute": "disabilityCoverageDetails",
+      "relation": "includes"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "hierarchies": [
+    {
+      "parent": "InsuranceProduct",
+      "child": "LifeInsurance",
+      "relation": "subClassOf"
+    },
+    {
+      "parent": "InsuranceProduct",
+      "child": "AutomobileInsurance",
+      "relation": "subClassOf"
+    },
+    {
+      "parent": "InsuranceProduct",
+      "child": "HealthInsurance",
+      "relation": "subClassOf"
+    },
+    {
+      "parent": "Coverage",
+      "child": "VehicleCoverage",
+      "relation": "subClassOf"
+    },
+    {
+      "parent": "Coverage",
+      "child": "DriverCoverage",
+      "relation": "subClassOf"
+    },
+    {
+      "parent": "Coverage",
+      "child": "AccidentCoverage",
+      "relation": "subClassOf"
+    },
+    {
+      "parent": "Coverage",
+      "child": "DeathCoverage",
+      "relation": "subClassOf"
+    },
+    {
+      "parent": "Coverage",
+      "child": "DisabilityCoverage",
+      "relation": "subClassOf"
+    },
+    {
+      "parent": "RiskFactor",
+      "child": "DrivingHistory",
+      "relation": "subClassOf"
+    },
+    {
+      "parent": "RiskFactor",
+      "child": "MedicalHistory",
+      "relation": "subClassOf"
+    },
+    {
+      "parent": "RiskFactor",
+      "child": "Age",
+      "relation": "subClassOf"
+    },
+    {
+      "parent": "RiskFactor",
+      "child": "PropertyValue",
+      "relation": "subClassOf"
+    }
+  ]
+}
