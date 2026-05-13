@@ -337,6 +337,7 @@ class OntologyRefiner:
 - ontology graph 품질 개선
 - Enterprise Knowledge Graph 구조 개선
 - semantic connectivity 강화
+- 한국어로 작성된 부분 전체 영어로 변경
 
 --------------------------------------------------
 [허용 Relation]

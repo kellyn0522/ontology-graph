@@ -296,7 +296,7 @@ def main():
     # -----------------------------
     # GRAPH VISUALIZATION
     # -----------------------------
-    graph_visualizer = GraphVisualizer()
+    graph_visualizer = GraphVisualizer(core_classes=core_classes)
 
     graph_visualizer.build(
         ontology_data=refined_result

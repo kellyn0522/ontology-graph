@@ -1,45 +1,23 @@
 @prefix onto: <http://example.org/ontology/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-onto:ClientProject rdfs:subClassOf onto:Project .
+onto:ApprovalDocument rdfs:subClassOf onto:Document .
 
-onto:Contract onto:belongsTo onto:Customer ;
-    onto:includes onto:Service .
+onto:OperationalReport rdfs:subClassOf onto:Document .
 
-onto:ContractDocument rdfs:subClassOf onto:Document .
+onto:System onto:requires onto:Database .
 
-onto:DatabaseAdministrator onto:manages onto:DatabaseSystem .
+onto:TechnicalDocument rdfs:subClassOf onto:Department,
+        onto:Project .
 
-onto:FinanceDepartment onto:manages onto:Invoice .
+onto:Department onto:manages onto:Document,
+        onto:Employee,
+        onto:Project,
+        onto:Service .
 
-onto:InternalProject rdfs:subClassOf onto:Project .
+onto:Service onto:requires onto:AuthenticationSystem .
 
-onto:ManagementSystem onto:covers onto:Document,
-        onto:Project ;
-    rdfs:subClassOf onto:SoftwareSystem .
-
-onto:Manager onto:manages onto:Employee ;
-    rdfs:subClassOf onto:Employee .
-
-onto:Product onto:belongsTo onto:Service ;
-    rdfs:subClassOf onto:Service .
-
-onto:ReportDocument rdfs:subClassOf onto:Document .
-
-onto:ResearchProject onto:includes onto:TechnicalDocument ;
-    rdfs:subClassOf onto:Project .
-
-onto:Invoice onto:belongsTo onto:Customer .
-
-onto:TechnicalDocument rdfs:subClassOf onto:Document .
-
-onto:Customer onto:subscribesTo onto:Service .
-
-onto:DatabaseSystem rdfs:subClassOf onto:SoftwareSystem .
-
-onto:Employee onto:belongsTo onto:Department .
-
-onto:SoftwareSystem onto:requires onto:DatabaseSystem .
-
-onto:Project onto:includes onto:Document .
+onto:Project onto:includes onto:Database,
+        onto:Document,
+        onto:Employee .
 

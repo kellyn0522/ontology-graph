@@ -100,7 +100,7 @@ if uploaded_file and run_button:
 
         text = loader.load_text()
 
-    st.success("1. PDF Loaded")
+    st.success("1. PDF Loaded\n > 입력받은 PDF 문서에서 텍스트 데이터 추출")
 
     # ---------------------------------------------------------
     # TEXT PREVIEW
@@ -130,7 +130,7 @@ if uploaded_file and run_button:
             "core_classes"
         ]
 
-    st.success("2. Core Classes Extracted")
+    st.success("2. Core Classes Extracted\n > 문서의 핵심 Ontology Class 추출")
 
     with st.expander("📚 Core Classes"):
         st.json(core_classes)
@@ -152,7 +152,7 @@ if uploaded_file and run_button:
             "hierarchies"
         ]
 
-    st.success("3. Hierarchy Constructed")
+    st.success("3. Hierarchy Constructed\n > Class 간의 계층 구조(subClassOf) 생성")
 
     with st.expander("🌳 Hierarchies"):
         st.json(hierarchies)
@@ -176,7 +176,7 @@ if uploaded_file and run_button:
             "relations"
         ]
 
-    st.success("4. Semantic Relations Extracted")
+    st.success("4. Semantic Relations Extracted\n > Class 간의 의미적 관계를 생성")
 
     with st.expander("🔗 Semantic Relations"):
         st.json(relations)
@@ -196,7 +196,7 @@ if uploaded_file and run_button:
             relations=relations
         )
 
-    st.success("5. Ontology Refinement Completed")
+    st.success("5. Ontology Refinement Completed\n > 중복이나 불필요한 Ontology 구조 정제")
 
     with st.expander("✨ Refined Ontology"):
         st.json(refined_result)
@@ -230,7 +230,7 @@ if uploaded_file and run_button:
             str(rdf_output_path)
         )
 
-    st.success("6. RDF Graph Generated")
+    st.success("6. RDF Graph Generated\n > Ontology를 RDF 기반 KG 형태로 변환")
 
     # ---------------------------------------------------------
     # RDF PREVIEW
@@ -260,9 +260,6 @@ if uploaded_file and run_button:
     tab1, tab2 = st.tabs([
         "Full Graph",
         "Taxonomy View",
-        # "Business View",
-        # "Dependency View",
-        # "Document Flow View"
     ])
 
     # ---------------------------------------------------------
@@ -271,7 +268,7 @@ if uploaded_file and run_button:
 
     with tab1:
 
-        full_visualizer = GraphVisualizer()
+        full_visualizer = GraphVisualizer(core_classes=core_classes)
 
         full_visualizer.build(
             ontology_data=refined_result
@@ -305,7 +302,7 @@ if uploaded_file and run_button:
 
     with tab2:
 
-        taxonomy_visualizer = GraphVisualizer()
+        taxonomy_visualizer = GraphVisualizer(core_classes=core_classes)
 
         taxonomy_visualizer.build(
             ontology_data=refined_result,
@@ -335,8 +332,6 @@ if uploaded_file and run_button:
             height=800,
             scrolling=True
         )
-
-    
 
     # ---------------------------------------------------------
     # DOWNLOAD RDF

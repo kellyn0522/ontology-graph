@@ -3,18 +3,14 @@ from pyvis.network import Network
 
 class GraphVisualizer:
 
-    CENTRAL_HUBS = [
-        "Company",
-        "Project",
-        "Employee",
-        "Department",
-        "Customer",
-        "Service",
-        "Document",
-        "SoftwareSystem"
-    ]
-
-    def __init__(self):
+    def __init__(
+        self, 
+        core_classes: list = None
+    ):
+        
+        self.core_classes = set(
+            core_classes or []
+        )
 
         self.net = Network(
             height="950px",
@@ -66,7 +62,7 @@ class GraphVisualizer:
         # CENTRAL HUB
         # ---------------------------------------------------
 
-        if node_name in self.CENTRAL_HUBS:
+        if node_name in self.core_classes:
 
             self.net.add_node(
                 node_name,
@@ -117,7 +113,7 @@ class GraphVisualizer:
 
                 shape="dot",
 
-                size=28,
+                size=22,
 
                 color={
                     "background": "#D8F3DC",
