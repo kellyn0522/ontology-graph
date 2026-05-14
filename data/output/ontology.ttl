@@ -1,23 +1,27 @@
 @prefix onto: <http://example.org/ontology/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-onto:ApprovalDocument rdfs:subClassOf onto:Document .
+onto:Analyst rdfs:subClassOf onto:Employee .
 
-onto:OperationalReport rdfs:subClassOf onto:Document .
+onto:ContractDocument rdfs:subClassOf onto:Document .
 
-onto:System onto:requires onto:Database .
-
-onto:TechnicalDocument rdfs:subClassOf onto:Department,
-        onto:Project .
-
-onto:Department onto:manages onto:Document,
+onto:Department onto:manages onto:Customer,
+        onto:Document,
         onto:Employee,
         onto:Project,
         onto:Service .
 
-onto:Service onto:requires onto:AuthenticationSystem .
+onto:Engineer rdfs:subClassOf onto:Employee .
 
-onto:Project onto:includes onto:Database,
-        onto:Document,
-        onto:Employee .
+onto:Manager rdfs:subClassOf onto:Employee .
+
+onto:ReportDocument rdfs:subClassOf onto:Document .
+
+onto:System onto:requires onto:CustomerInfoDatabase,
+        onto:Database,
+        onto:TransactionLogSystem .
+
+onto:TechnicalDocument rdfs:subClassOf onto:Document .
+
+onto:Service onto:requires onto:AuthenticationSystem .
 
